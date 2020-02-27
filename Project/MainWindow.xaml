@@ -1,0 +1,54 @@
+﻿<Window x:Class="OODProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OODProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+
+    <TabControl TabStripPlacement = "Top">
+
+        <TabItem Name="selectMovies" Header="Select Movies" Width="200">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="325*"/>
+                    <ColumnDefinition Width="467*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="tblkMoviesList" HorizontalAlignment="Left" Margin="141,90,0,0" TextWrapping="Wrap" Text="Moives" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" RenderTransformOrigin="0.59,0.595"/>
+                <ListBox x:Name="lbxMoviesOptions" HorizontalAlignment="Left" Height="221" Margin="141,126,0,0" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2" SelectionChanged="lbxMoviesOptions_SelectionChanged"/>
+                <TextBlock x:Name="tblkGenreFilter" HorizontalAlignment="Left" Margin="33,136,0,0" TextWrapping="Wrap" Text="Genre" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+                <TextBlock x:Name="tblkDetails" HorizontalAlignment="Left" Margin="130,59,0,0" TextWrapping="Wrap" Text="Details" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Grid.Column="1"/>
+                <TextBlock x:Name="tblkActors" HorizontalAlignment="Left" Margin="130,123,0,0" TextWrapping="Wrap" Text="Actors: " VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBlock x:Name="tblkActorsDetails" HorizontalAlignment="Left" Margin="186,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBlock x:Name="tblkDirector" HorizontalAlignment="Left" Margin="130,160,0,0" TextWrapping="Wrap" Text="Director: " VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBlock x:Name="tblkDirectorDetails" HorizontalAlignment="Left" Margin="186,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBlock x:Name="tblkTime" HorizontalAlignment="Left" Margin="130,194,0,0" TextWrapping="Wrap" Text="Time: " VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBlock x:Name="tblkTimeDetails" HorizontalAlignment="Left" Margin="186,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.458,0.91"/>
+                <TextBlock x:Name="tblkCart" HorizontalAlignment="Left" Margin="130,230,0,0" TextWrapping="Wrap" Text="Cart" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
+                <ListBox x:Name="lbxCart" HorizontalAlignment="Left" Height="86" Margin="130,261,0,0" VerticalAlignment="Top" Width="163" Grid.Column="1"/>
+                <Button x:Name="btnBuyTickets" Content="Buy Tickets" HorizontalAlignment="Left" Margin="310,368,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1"/>
+                <RadioButton x:Name="radioAll" Content="All" HorizontalAlignment="Left" Margin="33,179,0,0" VerticalAlignment="Top" Click="RadioAll_Click_1"/>
+                <RadioButton x:Name="radioAction" Content="Action" HorizontalAlignment="Left" Margin="33,217,0,0" VerticalAlignment="Top" Click="RadioAll_Click_1"/>
+                <RadioButton x:Name="radioComedy" Content="Comedy" HorizontalAlignment="Left" Margin="33,253,0,0" VerticalAlignment="Top" Click="RadioAll_Click_1"/>
+                <RadioButton x:Name="radioDrama" Content="Drama" HorizontalAlignment="Left" Margin="33,289,0,0" VerticalAlignment="Top" Click="RadioAll_Click_1"/>
+                <TextBlock x:Name="tblkRating" Grid.Column="1" HorizontalAlignment="Left" Margin="130,94,0,0" TextWrapping="Wrap" Text="Rating: " VerticalAlignment="Top"/>
+                <TextBlock x:Name="tblkRatingDetails" Grid.Column="1" HorizontalAlignment="Left" Margin="186,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioHorror" Content="Horror" HorizontalAlignment="Left" Margin="33,322,0,0" VerticalAlignment="Top" Click="RadioAll_Click_1"/>
+                <Button x:Name="btnAddToCart" Content="Add to Cart" Grid.Column="1" HorizontalAlignment="Left" Margin="36,289,0,0" VerticalAlignment="Top" Width="75" Click="btnAddToCart_Click"/>
+                <TextBlock x:Name="tblkTotal" Grid.Column="1" HorizontalAlignment="Left" Margin="130,368,0,0" TextWrapping="Wrap" Text="Total: " VerticalAlignment="Top" FontSize="16"/>
+                <TextBlock x:Name="tblkTotalDetails" Grid.Column="1" HorizontalAlignment="Left" Margin="186,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <Button x:Name="btnRemoveFromCart" Content="Remove" Grid.Column="1" HorizontalAlignment="Left" Margin="36,327,0,0" VerticalAlignment="Top" Width="75" Click="BtnRemoveFromCart_Click"/>
+                <Image x:Name="imgDetails" Source="/images/1917.jpg"  Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="325,11,0,0" VerticalAlignment="Top" Width="100"/>
+
+            </Grid>
+        </TabItem>
+
+        <TabItem Name="addMovies" Header="Add Movies" Width="200">
+
+        </TabItem>
+    </TabControl>
+
+
+</Window>
